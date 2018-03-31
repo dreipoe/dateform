@@ -12,7 +12,7 @@ var dateform = {
 		this.hour = document.getElementById("hour")
 		this.minute = document.getElementById("minute")	
 
-		for (var i = 2018; i <= 2038; i++) this.push(this.year, i)
+		for (var i = 1970; i <= 2037; i++) this.push(this.year, i)
 		for (var i = 0; i <= 23; i++) this.push(this.hour, i)
 		for (var i = 0; i <= 59; i++) this.push(this.minute, i)
 		for (var i = 1; i <= 31; i++) this.push(this.day, i)
