@@ -37,24 +37,27 @@ var dateform = {
 		var day30 = ['4', '6', '9', '11']
 		var days = this.day.lastChild.value
 
-		if (day31.indexOf(month) != -1)
+		if (day31.indexOf(month) != -1) {
 			var d = days - 31
-		else if (day30.indexOf(month) != -1)
+		} else if (day30.indexOf(month) != -1) {
 			var d = days - 30
-		else {
-			if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0)))
+		} else {
+			if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0))) {
 				var d = days - 29
-			else
+			} else {
 				var d = days - 28
+			}
 		}
 
-		if (d > 0)
-			for (var i = 0; i < d; i++)
+		if (d > 0) {
+			for (var i = 0; i < d; i++) {
 				this.pop(this.day)
-		else
+			}
+		} else {
 			for (var i = 0; i < -d; i++) {
 				days++
 				this.push(this.day, days)
 			}
+		}
 	}
 };
