@@ -55,8 +55,7 @@ var dateform = {
 			}
 		} else {
 			for (var i = 0; i < -d; i++) {
-				days++
-				this.push(this.day, days)
+				this.push(this.day, ++days)
 			}
 		}
 	}
